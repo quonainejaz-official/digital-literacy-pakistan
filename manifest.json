@@ -1,0 +1,15 @@
+{
+  "name": "Digital Literacy Pakistan",
+  "short_name": "DL Pakistan",
+  "description": "Empowering Pakistani communities with essential digital skills and internet safety knowledge.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F9FAFB",
+  "theme_color": "#2D5A27",
+  "icons": [
+    { "src": "/assets/images/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ],
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["education", "technology", "community"]
+}

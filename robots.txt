@@ -1,0 +1,4 @@
+# https://www.digitalliteracy.pk/
+User-agent: *
+Allow: /
+Sitemap: https://www.digitalliteracy.pk/sitemap.xml

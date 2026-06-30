@@ -1,0 +1,14 @@
+# Digital Literacy Pakistan
+# Empowering Pakistani communities with essential digital skills
+
+## Team
+- Developer: OKComputer Pakistan
+- Location: Islamabad, Pakistan
+- Contact: info@digitalliteracy.pk
+
+## Technology
+- HTML5, CSS3 (Tailwind CSS), JavaScript
+- Deployed on Vercel
+
+## Purpose
+Providing free, accessible digital literacy education to communities across Pakistan in English and Urdu.

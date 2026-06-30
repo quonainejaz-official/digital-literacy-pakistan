@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Internet Safety Hub - Free Cybersecurity Education Pakistan | Digital Literacy Pakistan</title>
+<meta name="description" content="Learn internet safety, identify phishing scams, check password strength, and protect your privacy online. Free cybersecurity education for Pakistani communities in English and Urdu.">
+<meta name="keywords" content="internet safety Pakistan, cybersecurity education, phishing detection, password security, online privacy Pakistan, scam recognition, safe banking online, FIA cyber crime Pakistan">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Internet Safety Hub - Free Cybersecurity Education Pakistan">
+<meta property="og:description" content="Protect yourself online with free interactive safety tools, password checker, phishing detection game, and expert cybersecurity guidance for Pakistanis.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.digitalliteracy.pk/pages/safety.html">
+<meta property="og:image" content="https://www.digitalliteracy.pk/assets/images/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Internet Safety Hub - Digital Literacy Pakistan">
+<meta name="twitter:description" content="Free cybersecurity education and online safety tools for Pakistani communities.">
+<link rel="canonical" href="https://www.digitalliteracy.pk/pages/safety.html">
+<link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Internet Safety Guide for Pakistani Communities",
+  "description": "Comprehensive internet safety guide covering password security, phishing detection, privacy protection, and scam recognition for Pakistani users.",
+  "author": {"@type":"Organization","name":"Digital Literacy Pakistan"},
+  "datePublished": "2025-01-01",
+  "dateModified": "2025-06-30",
+  "audience": ["Pakistani internet users", "Students", "Small business owners", "Parents"],
+  "about": ["Cybersecurity", "Internet safety", "Phishing", "Password security", "Online privacy"]
+}
+</script>
+</head>
+<body class="bg-gray-50">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar-inner">
+    <a href="/" class="navbar-brand"><span aria-hidden="true">💻</span> Digital Literacy PK</a>
+    <div class="navbar-links">
+      <a href="/" class="navbar-link">Home</a>
+      <a href="/pages/tutorials.html" class="navbar-link">Tutorials</a>
+      <a href="/pages/safety.html" class="navbar-link active" aria-current="page">Safety</a>
+      <a href="/pages/community.html" class="navbar-link">Community</a>
+      <button id="langToggle" class="btn-lang" aria-label="Toggle language between English and Urdu">اردو</button>
+    </div>
+  </div>
+</nav>
+
+<section class="page-header bg-gradient-to-r from-red-600 to-orange-600 text-center" aria-label="Safety page header">
+  <div class="container">
+    <h1 class="text-4xl lg:text-5xl font-bold mb-4" id="main-content">Internet Safety Hub</h1>
+    <p class="text-xl text-red-100 max-w-3xl mx-auto">Protect yourself online with our comprehensive safety tools, interactive learning modules, and expert guidance for Pakistani users.</p>
+  </div>
+</section>
+
+<section class="section section-white" aria-labelledby="tools-title">
+  <div class="container">
+    <div class="section-header">
+      <h2 id="tools-title" class="section-title">Interactive Safety Tools</h2>
+      <p class="section-desc">Test and improve your security knowledge with these practical tools</p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <!-- Password Strength Checker -->
+      <div class="tool-card card p-6">
+        <div class="flex items-center mb-6">
+          <div class="text-3xl mr-4" aria-hidden="true">🔐</div>
+          <div><h3 class="card-title mb-1">Password Strength Checker</h3><p class="text-gray-600 text-sm">Test your password security in real-time</p></div>
+        </div>
+        <div class="mb-6">
+          <label for="passwordInput" class="block text-sm font-medium text-gray-700 mb-2">Enter a password to test:</label>
+          <input type="password" id="passwordInput" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent" placeholder="Type your password here..." autocomplete="new-password">
+        </div>
+        <div class="mb-6">
+          <div class="flex justify-between text-sm text-gray-600 mb-2"><span>Password Strength</span><span id="strengthText">Enter a password to test</span></div>
+          <div class="w-full bg-gray-200 rounded-full h-3"><div id="strengthMeter" class="strength-meter bg-gray-400 h-3 rounded-full" style="width:0%"></div></div>
+        </div>
+        <div id="passwordFeedback" class="mb-6 hidden">
+          <h4 class="font-semibold text-gray-900 mb-2">Security Analysis:</h4>
+          <div id="feedbackList" class="space-y-2"></div>
+        </div>
+        <div class="border-t pt-6">
+          <button id="generatePassword" class="w-full bg-red-600 text-white py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors mb-3">Generate Strong Password</button>
+          <div id="generatedPassword" class="password-display bg-gray-100 p-3 rounded-lg text-center text-lg hidden"></div>
+        </div>
+      </div>
+      <!-- Phishing Detection Game -->
+      <div class="tool-card card p-6">
+        <div class="flex items-center mb-6">
+          <div class="text-3xl mr-4" aria-hidden="true">🎣</div>
+          <div><h3 class="card-title mb-1">Phishing Detection Game</h3><p class="text-gray-600 text-sm">Learn to identify suspicious emails and messages</p></div>
+        </div>
+        <div id="phishingGame">
+          <div class="mb-6">
+            <div class="flex justify-between items-center mb-4">
+              <span class="text-sm text-gray-600">Question <span id="phishingQuestionNum">1</span> of 5</span>
+              <span class="text-sm text-gray-600">Score: <span id="phishingScore">0</span>/5</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2 mb-4"><div id="phishingProgress" class="bg-red-600 h-2 rounded-full transition-all" style="width:20%"></div></div>
+          </div>
+          <div id="phishingContent"></div>
+          <div id="phishingResults" class="hidden text-center">
+            <div class="text-6xl mb-4" aria-hidden="true">🎉</div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Game Complete!</h3>
+            <p class="text-gray-600 mb-4">Your Score: <span id="finalScore">0</span>/5</p>
+            <p id="scoreMessage" class="text-gray-700 mb-6"></p>
+            <button onclick="resetPhishingGame()" class="bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors">Play Again</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Emergency Contacts -->
+<section class="section section-dark" aria-labelledby="emergency-title">
+  <div class="container">
+    <div class="section-header">
+      <h2 id="emergency-title" class="section-title">Emergency Support</h2>
+      <p class="section-desc">Get immediate help if you've been targeted by online threats</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-red-50 border border-red-200 rounded-lg p-6">
+        <div class="text-center mb-4"><div class="text-4xl mb-2" aria-hidden="true">🚨</div><h3 class="text-lg font-semibold text-red-900">Report Cyber Crime</h3></div>
+        <div class="space-y-3 text-sm">
+          <div class="flex justify-between"><span class="text-gray-700">FIA Cyber Crime:</span><a href="tel:9911" class="text-red-600 font-semibold hover:underline">9911</a></div>
+          <div class="flex justify-between"><span class="text-gray-700">Online Portal:</span><a href="https://nr3c.gov.pk" target="_blank" rel="noopener noreferrer" class="text-red-600 font-semibold hover:underline">nr3c.gov.pk</a></div>
+          <div class="flex justify-between"><span class="text-gray-700">Email:</span><a href="mailto:help@nr3c.gov.pk" class="text-red-600 font-semibold hover:underline">help@nr3c.gov.pk</a></div>
+        </div>
+      </div>
+      <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+        <div class="text-center mb-4"><div class="text-4xl mb-2" aria-hidden="true">🏦</div><h3 class="text-lg font-semibold text-blue-900">Banking Support</h3></div>
+        <div class="space-y-3 text-sm">
+          <div class="flex justify-between"><span class="text-gray-700">State Bank:</span><a href="tel:021-111-727-273" class="text-blue-600 font-semibold hover:underline">111-727-273</a></div>
+          <div class="flex justify-between"><span class="text-gray-700">HBL Helpline:</span><a href="tel:021-111-111-425" class="text-blue-600 font-semibold hover:underline">111-111-425</a></div>
+          <div class="flex justify-between"><span class="text-gray-700">UBL Helpline:</span><a href="tel:021-111-825-888" class="text-blue-600 font-semibold hover:underline">111-825-888</a></div>
+        </div>
+      </div>
+      <div class="bg-green-50 border border-green-200 rounded-lg p-6">
+        <div class="text-center mb-4"><div class="text-4xl mb-2" aria-hidden="true">💬</div><h3 class="text-lg font-semibold text-green-900">General Support</h3></div>
+        <div class="space-y-3 text-sm">
+          <div class="flex justify-between"><span class="text-gray-700">PTA Helpline:</span><a href="tel:0800-550-55" class="text-green-600 font-semibold hover:underline">0800-550-55</a></div>
+          <div class="flex justify-between"><span class="text-gray-700">Citizen Portal:</span><a href="https://citizensportal.gov.pk" target="_blank" rel="noopener noreferrer" class="text-green-600 font-semibold hover:underline">citizensportal.gov.pk</a></div>
+          <div class="flex justify-between"><span class="text-gray-700">Our Community:</span><a href="/pages/community.html" class="text-green-600 font-semibold hover:underline">Community Support</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">Digital Literacy Pakistan</div>
+      <p class="footer-text">Empowering communities through digital education and internet safety awareness.</p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/" class="footer-link">Home</a>
+        <a href="/pages/tutorials.html" class="footer-link">Tutorials</a>
+        <a href="/pages/community.html" class="footer-link">Community</a>
+        <a href="mailto:info@digitalliteracy.pk" class="footer-link">Contact Us</a>
+      </nav>
+      <div class="footer-divider"><p class="footer-copy">&copy; 2025 Digital Literacy Pakistan. Built for the community, by the community.</p></div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
+<script src="/assets/js/safety.js" defer></script>
+</body>
+</html>
